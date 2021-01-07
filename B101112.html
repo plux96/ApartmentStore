@@ -1,56 +1,1029 @@
 <!DOCTYPE html>
 
 <head>
-    <title>B 10-11-12</title>
+    <title>B-10-11-12</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+            -webkit-animation-name: fadeIn;
+            /* Fade in the background */
+            -webkit-animation-duration: 0.4s;
+            animation-name: fadeIn;
+            animation-duration: 0.4s
+        }
+
+        /* Modal Content */
+        .modal-content {
+            position: fixed;
+            bottom: 0;
+            background-color: #fefefe;
+            width: 100%;
+            -webkit-animation-name: slideIn;
+            -webkit-animation-duration: 0.4s;
+            animation-name: slideIn;
+            animation-duration: 0.4s
+        }
+
+        /* The Close Button */
+        .close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-header {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+        }
+
+        .modal-body {
+            padding: 2px 16px;
+        }
+
+        .modal-footer {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+        }
+
+        /* Add Animation */
+        @-webkit-keyframes slideIn {
+            from {
+                bottom: -300px;
+                opacity: 0
+            }
+
+            to {
+                bottom: 0;
+                opacity: 1
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                bottom: -300px;
+                opacity: 0
+            }
+
+            to {
+                bottom: 0;
+                opacity: 1
+            }
+        }
+
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1 style="text-align: center; color: #6155a6;">B block ---- B 10-11-12</h1>
-    <div class="grid-container" style="margin-top: 30px;">
-        <div class="item1">Хоналар</div>
-        <div class="item2" style="background-color: #00917c;">B Block</div>
-        <div class="item3" style="background-color: #00917c;">4 хона</div>
-        <div class="item4" style="background-color: #00917c;">3 хона</div>
-        <div class="item5" style="background-color: #00917c;">2 хона</div>
-        <div class="item6" style="background-color: #ff7b54;">9 этаж</div>
-        <div class="item7 colorItem">7</div>
-        <div class="item8 colorItem">8</div>
-        <div class="item9 colorItem">9</div>
-        <div class="item10" style="background-color: #ff7b54;">8 этаж</div>
-        <div class="item11 colorItem">11</div>
-        <div class="item12 colorItem">12</div>
-        <div class="item13 colorItem">13</div>
-        <div class="item14" style="background-color: #ff7b54;">7 этаж</div>
-        <div class="item15 colorItem">15</div>
-        <div class="item16 colorItem">16</div>
-        <div class="item17 colorItem">17</div>
-        <div class="item18" style="background-color: #ff7b54;">6 этаж</div>
-        <div class="item19 colorItem">29</div>
-        <div class="item20 colorItem">20</div>
-        <div class="item21 colorItem">21</div>
-        <div class="item22" style="background-color: #ff7b54;">5 этаж</div>
-        <div class="item23 colorItem">23</div>
-        <div class="item24 colorItem">24</div>
-        <div class="item25 colorItem">25</div>
-        <div class="item26" style="background-color: #ff7b54;">4 этаж</div>
-        <div class="item27 colorItem">27</div>
-        <div class="item28 colorItem">28</div>
-        <div class="item29 colorItem">29</div>
-        <div class="item30" style="background-color: #ff7b54;">3 этаж</div>
-        <div class="item31 colorItem">31</div>
-        <div class="item32 colorItem">32</div>
-        <div class="item33 colorItem">33</div>
-        <div class="item34" style="background-color: #ff7b54;">2 этаж</div>
-        <div class="item35 colorItem">35</div>
-        <div class="item36 colorItem">36</div>
-        <div class="item37 colorItem">37</div>
-        <div class="item38" style="background-color: #ff7b54;">Нежилой</div>
-        <div class="item39 colorItem">39</div>
-        <div class="item40"></div>
-        <div class="item41 colorItem">41</div>
-        <div class="item42" style="background-color: #ff7b54;">Подьезд</div>
-        <div class="item43" style="background-color: #ffd66b;">B 10-11-12</div>
+    <div class="content">
+        <div class="button11">
+            <h1 style="text-align: center; color: #6155a6;">B block ---- B 10 - 11 - 12</h1>
+            <div class="grid-container" style="margin-top: 30px;">
+                <div class="item1">Хоналар</div>
+                <div class="item2" style="background-color: #00917c;">B Block</div>
+                <div class="item3" style="background-color: #00917c;">4 хона</div>
+                <div class="item4" style="background-color: #00917c;">3 хона</div>
+                <div class="item5" style="background-color: #00917c;">2 хона</div>
+                <div class="item6" style="background-color: #ff7b54;">9 этаж</div>
+                <div class="item7 colorItem"><button id="myBtn25">106 Хонадон</button></div>
+                <div class="item8 colorItem"><button id="myBtn26">107 Хонадон</button></div>
+                <div class="item9 colorItem"><button id="myBtn27">108 Хонадон</button></div>
+                <div class="item10" style="background-color: #ff7b54;">8 этаж</div>
+                <div class="item11 colorItem"><button id="myBtn22">103 Хонадон</button></div>
+                <div class="item12 colorItem"><button id="myBtn23">104 Хонадон</button></div>
+                <div class="item13 colorItem"><button id="myBtn24">105 Хонадон</button></div>
+                <div class="item14" style="background-color: #ff7b54;">7 этаж</div>
+                <div class="item15 colorItem"><button id="myBtn19">100 Хонадон</button></div>
+                <div class="item16 colorItem"><button id="myBtn20">101 Хонадон</button></div>
+                <div class="item17 colorItem"><button id="myBtn21">102 Хонадон</button></div>
+                <div class="item18" style="background-color: #ff7b54;">6 этаж</div>
+                <div class="item19 colorItem"><button id="myBtn16">97 Хонадон</button></div>
+                <div class="item20 colorItem"><button id="myBtn17">98 Хонадон</button></div>
+                <div class="item21 colorItem"><button id="myBtn18">99 Хонадон</button></div>
+                <div class="item22" style="background-color: #ff7b54;">5 этаж</div>
+                <div class="item23 colorItem"><button id="myBtn13">94 Хонадон</button></div>
+                <div class="item24 colorItem"><button id="myBtn14">95 Хонадон</button></div>
+                <div class="item25 colorItem"><button id="myBtn15">96 Хонадон</button></div>
+                <div class="item26" style="background-color: #ff7b54;">4 этаж</div>
+                <div class="item27 colorItem"><button id="myBtn10">91 Хонадон</button></div>
+                <div class="item28 colorItem"><button id="myBtn11">92 Хонадон</button></div>
+                <div class="item29 colorItem"><button id="myBtn12">93 Хонадон</button></div>
+                <div class="item30" style="background-color: #ff7b54;">3 этаж</div>
+                <div class="item31 colorItem"><button id="myBtn7">88 Хонадон</button></div>
+                <div class="item32 colorItem"><button id="myBtn8">89 Хонадон</button></div>
+                <div class="item33 colorItem"><button id="myBtn9">90 Хонадон</button></div>
+                <div class="item34" style="background-color: #ff7b54;">2 этаж</div>
+                <div class="item35 colorItem"><button id="myBtn4">85 Хонадон</button></div>
+                <div class="item36 colorItem"><button id="myBtn5">86 Хонадон</button></div>
+                <div class="item37 colorItem"><button id="myBtn6">87 Хонадон</button></div>
+                <div class="item38" style="background-color: #ff7b54;">Нежилой</div>
+                <div class="item39 colorItem">1</div>
+                <div class="item40 colorItem"></div>
+                <div class="item41 colorItem">2</div>
+                <div class="item42" style="background-color: #ff7b54;">Подьезд</div>
+                <div class="item43" style="background-color: #ffd66b;">B 10 - 11 - 12</div>
 
+            </div>
+        </div>
     </div>
+
+    <div id="myModal1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>82 Хонадон</h2>
+            </div>
+            <div class="modal-body">
+                <p>6,60*14,28 + 3,60*0,80 + 4,00*5,60 - 0,40*1,45</p>
+                <p>Total area: 118.95</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Contact (Additional information): @plux96</h3>
+            </div>
+        </div>
+    </div>
+    <div id="myModal2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>83 Хонадон</h2>
+            </div>
+            <div class="modal-body">
+                <p>4,00*6,60 + 2,48*7,40 + 3,12*6,60 - 3,60*8,28 - 0,40*1,60</p>
+                <p>Total area: 94.51</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Contact (Additional information): @plux96</h3>
+            </div>
+        </div>
+    </div>
+    <div id="myModal3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>84 Хонадон</h2>
+            </div>
+            <div class="modal-body">
+                <p>3,60*14,28 + 0,40*5,60 + 3,60*6,40 - 0,40*1,65</p>
+                <p>Total area: 76.03</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Contact (Additional information): @plux96</h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal4" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>85 Хонадон</h2>
+            </div>
+            <div class="modal-body">
+                <p>6,60*14,28 + 3,60*0,80 + 4,00*5,60 - 0,40*2,35 - 0,40*0,80</p>
+                <p>Total area: 118.27</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Contact (Additional information): @plux96</h3>
+            </div>
+        </div>
+    </div>
+    <div id="myModal5" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>86 Хонадон</h2>
+            </div>
+            <div class="modal-body">
+                <p>4,00*6,60 + 2,48*7,40 + 3,12*6,60 - 3,60*8,28 - 0,40*2,25</p>
+                <p>Total area: 94.25</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Contact (Additional information): @plux96</h3>
+            </div>
+        </div>
+    </div>
+    <div id="myModal6" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>87 Хонадон</h2>
+            </div>
+            <div class="modal-body">
+                <p>3,60*14,28 + 0,40*5,60 + 3,60*6,40 - 0,40*2,30</p>
+                <p>Total area: 75,77</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Contact (Additional information): @plux96</h3>
+            </div>
+        </div>
+    </div>
+    <div id="myModal7" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>88 Хонадон</h2>
+            </div>
+            <div class="modal-body">
+                <p>6,60*14,28 + 3,60*0,80 + 4,00*5,60 - 0,40*2,35 - 0,40*1,05</p>
+                <p>Total area: 118.07</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Contact (Additional information): @plux96</h3>
+            </div>
+        </div>
+    </div>
+    <div id="myModal8" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>89 Хонадон</h2>
+            </div>
+            <div class="modal-body">
+                <p>4,00*6,60 + 2,48*7,40 + 3,12*6,60 - 3,60*8,28 - 0,40*2,50</p>
+                <p>Total area: 94.15</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Contact (Additional information): @plux96</h3>
+            </div>
+        </div>
+    </div>
+    <div id="myModal9" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>90 Хонадон</h2>
+            </div>
+            <div class="modal-body">
+                <p>3,60*14,28 + 0,40*5,60 + 3,60*6,40 - 0,40*2,55</p>
+                <p>Total area: 75,67</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Contact (Additional information): @plux96</h3>
+            </div>
+        </div>
+    </div>
+    <div id="myModal10" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>91 Хонадон</h2>
+            </div>
+            <div class="modal-body">
+                <p>6,60*14,28 + 3,60*0,80 + 4,00*5,60 - 0,40*2,35 - 0,40*1,30</p>
+                <p>Total area: 117.87</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Contact (Additional information): @plux96</h3>
+            </div>
+        </div>
+    </div>
+    <div id="myModal11" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>92 Хонадон</h2>
+            </div>
+            <div class="modal-body">
+                <p>4,00*6,60 + 2,48*7,40 + 3,12*6,60 - 3,60*8,28 - 0,40*2,75</p>
+                <p>Total area: 94.05</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Contact (Additional information): @plux96</h3>
+            </div>
+        </div>
+    </div>
+    <div id="myModal12" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>93 Хонадон</h2>
+            </div>
+            <div class="modal-body">
+                <p>3,60*14,28 + 0,40*5,60 + 3,60*6,40 - 0,40*2,80</p>
+                <p>Total area: 75,57</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Contact (Additional information): @plux96</h3>
+            </div>
+        </div>
+    </div>
+    <div id="myModal13" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>94 Хонадон</h2>
+            </div>
+            <div class="modal-body">
+                <p>6,60*14,28 + 3,60*0,80 + 4,00*5,60 - 0,40*2,35 - 0,40*1,55</p>
+                <p>Total area: 117.67</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Contact (Additional information): @plux96</h3>
+            </div>
+        </div>
+    </div>
+    <div id="myModal14" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>95 Хонадон</h2>
+            </div>
+            <div class="modal-body">
+                <p>4,00*6,60 + 2,48*7,40 + 3,12*6,60 - 3,60*8,28 - 0,40*3,00</p>
+                <p>Total area: 93.95</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Contact (Additional information): @plux96</h3>
+            </div>
+        </div>
+    </div>
+    <div id="myModal15" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>96 Хонадон</h2>
+            </div>
+            <div class="modal-body">
+                <p>3,60*14,28 + 0,40*5,60 + 3,60*6,40 - 0,40*3,05</p>
+                <p>Total area: 75,47</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Contact (Additional information): @plux96</h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal16" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>97 Хонадон</h2>
+            </div>
+            <div class="modal-body">
+                <p>6,60*14,28 + 3,60*0,80 + 4,00*5,60 - 0,40*2,35 - 0,40*1,30</p>
+                <p>Total area: 117.47</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Contact (Additional information): @plux96</h3>
+            </div>
+        </div>
+    </div>
+    <div id="myModal17" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>98 Хонадон</h2>
+            </div>
+            <div class="modal-body">
+                <p>4,00*6,60 + 2,48*7,40 + 3,12*6,60 - 3,60*8,28 - 0,40*2,75</p>
+                <p>Total area: 93.85</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Contact (Additional information): @plux96</h3>
+            </div>
+        </div>
+    </div>
+    <div id="myModal18" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>99 Хонадон</h2>
+            </div>
+            <div class="modal-body">
+                <p>3,60*14,28 + 0,40*5,60 + 3,60*6,40 - 0,40*2,80</p>
+                <p>Total area: 75,37</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Contact (Additional information): @plux96</h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal19" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>100 Хонадон</h2>
+            </div>
+            <div class="modal-body">
+                <p>6,60*14,28 + 3,60*0,80 + 4,00*5,60 - 0,40*2,35 - 0,40*1,30</p>
+                <p>Total area: 117.27</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Contact (Additional information): @plux96</h3>
+            </div>
+        </div>
+    </div>
+    <div id="myModal20" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>101 Хонадон</h2>
+            </div>
+            <div class="modal-body">
+                <p>4,00*6,60 + 2,48*7,40 + 3,12*6,60 - 3,60*8,28 - 0,40*2,75</p>
+                <p>Total area: 93.75</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Contact (Additional information): @plux96</h3>
+            </div>
+        </div>
+    </div>
+    <div id="myModal21" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>102 Хонадон</h2>
+            </div>
+            <div class="modal-body">
+                <p>3,60*14,28 + 0,40*5,60 + 3,60*6,40 - 0,40*2,80</p>
+                <p>Total area: 75,27</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Contact (Additional information): @plux96</h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal22" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>103 Хонадон</h2>
+            </div>
+            <div class="modal-body">
+                <p>6,60*14,28 + 3,60*0,80 + 4,00*5,60 - 0,40*2,35 - 0,40*1,30</p>
+                <p>Total area: 117.07</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Contact (Additional information): @plux96</h3>
+            </div>
+        </div>
+    </div>
+    <div id="myModal23" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>104 Хонадон</h2>
+            </div>
+            <div class="modal-body">
+                <p>4,00*6,60 + 2,48*7,40 + 3,12*6,60 - 3,60*8,28 - 0,40*2,75</p>
+                <p>Total area: 93.65</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Contact (Additional information): @plux96</h3>
+            </div>
+        </div>
+    </div>
+    <div id="myModal24" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>105 Хонадон</h2>
+            </div>
+            <div class="modal-body">
+                <p>3,60*14,28 + 0,40*5,60 + 3,60*6,40 - 0,40*2,80</p>
+                <p>Total area: 75,17</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Contact (Additional information): @plux96</h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal25" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>106 Хонадон</h2>
+            </div>
+            <div class="modal-body">
+                <p>6,60*14,28 + 3,60*0,80 + 4,00*5,60 - 0,40*2,35 - 0,40*1,30</p>
+                <p>Total area: 116.87</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Contact (Additional information): @plux96</h3>
+            </div>
+        </div>
+    </div>
+    <div id="myModal26" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>107 Хонадон</h2>
+            </div>
+            <div class="modal-body">
+                <p>4,00*6,60 + 2,48*7,40 + 3,12*6,60 - 3,60*8,28 - 0,40*2,75</p>
+                <p>Total area: 93.55</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Contact (Additional information): @plux96</h3>
+            </div>
+        </div>
+    </div>
+    <div id="myModal27" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>108 Хонадон</h2>
+            </div>
+            <div class="modal-body">
+                <p>3,60*14,28 + 0,40*5,60 + 3,60*6,40 - 0,40*2,80</p>
+                <p>Total area: 75,07</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Contact (Additional information): @plux96</h3>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var demo = false;
+
+        document.getElementById("myBtn4").addEventListener("click", function () {
+            demo = true;
+            console.log('myBtn4:' + demo);
+            var modal = document.getElementById("myModal4");
+            var btn = document.getElementById("myBtn4");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+        document.getElementById("myBtn5").addEventListener("click", function () {
+            demo = true;
+            console.log('myBtn3:' + demo);
+            var modal = document.getElementById("myModal5");
+            var btn = document.getElementById("myBtn5");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+        document.getElementById("myBtn6").addEventListener("click", function () {
+            demo = true;
+            console.log('myBtn3:' + demo);
+            var modal = document.getElementById("myModal6");
+            var btn = document.getElementById("myBtn6");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+        document.getElementById("myBtn7").addEventListener("click", function () {
+            demo = true;
+            console.log('myBtn7:' + demo);
+            var modal = document.getElementById("myModal7");
+            var btn = document.getElementById("myBtn7");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+        document.getElementById("myBtn8").addEventListener("click", function () {
+            demo = true;
+            console.log('myBtn8:' + demo);
+            var modal = document.getElementById("myModal8");
+            var btn = document.getElementById("myBtn8");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+        document.getElementById("myBtn9").addEventListener("click", function () {
+            demo = true;
+            console.log('myBtn9:' + demo);
+            var modal = document.getElementById("myModal9");
+            var btn = document.getElementById("myBtn9");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+        document.getElementById("myBtn10").addEventListener("click", function () {
+            demo = true;
+            console.log('myBtn10:' + demo);
+            var modal = document.getElementById("myModal10");
+            var btn = document.getElementById("myBtn10");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+        document.getElementById("myBtn11").addEventListener("click", function () {
+            demo = true;
+            console.log('myBtn11:' + demo);
+            var modal = document.getElementById("myModal11");
+            var btn = document.getElementById("myBtn11");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+        document.getElementById("myBtn12").addEventListener("click", function () {
+            demo = true;
+            console.log('myBtn12:' + demo);
+            var modal = document.getElementById("myModal12");
+            var btn = document.getElementById("myBtn12");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+        document.getElementById("myBtn13").addEventListener("click", function () {
+            demo = true;
+            console.log('myBtn13:' + demo);
+            var modal = document.getElementById("myModal13");
+            var btn = document.getElementById("myBtn13");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+        document.getElementById("myBtn14").addEventListener("click", function () {
+            demo = true;
+            console.log('myBtn14:' + demo);
+            var modal = document.getElementById("myModal14");
+            var btn = document.getElementById("myBtn14");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+        document.getElementById("myBtn15").addEventListener("click", function () {
+            demo = true;
+            console.log('myBtn15:' + demo);
+            var modal = document.getElementById("myModal15");
+            var btn = document.getElementById("myBtn15");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+        document.getElementById("myBtn16").addEventListener("click", function () {
+            demo = true;
+            console.log('myBtn16:' + demo);
+            var modal = document.getElementById("myModal16");
+            var btn = document.getElementById("myBtn16");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+        document.getElementById("myBtn17").addEventListener("click", function () {
+            demo = true;
+            console.log('myBtn17:' + demo);
+            var modal = document.getElementById("myModal17");
+            var btn = document.getElementById("myBtn17");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+        document.getElementById("myBtn18").addEventListener("click", function () {
+            demo = true;
+            console.log('myBtn18:' + demo);
+            var modal = document.getElementById("myModal18");
+            var btn = document.getElementById("myBtn18");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+        document.getElementById("myBtn19").addEventListener("click", function () {
+            demo = true;
+            console.log('myBtn19:' + demo);
+            var modal = document.getElementById("myModal19");
+            var btn = document.getElementById("myBtn19");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+        document.getElementById("myBtn20").addEventListener("click", function () {
+            demo = true;
+            console.log('myBtn20:' + demo);
+            var modal = document.getElementById("myModal20");
+            var btn = document.getElementById("myBtn20");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+        document.getElementById("myBtn21").addEventListener("click", function () {
+            demo = true;
+            console.log('myBtn21:' + demo);
+            var modal = document.getElementById("myModal21");
+            var btn = document.getElementById("myBtn21");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+        document.getElementById("myBtn22").addEventListener("click", function () {
+            demo = true;
+            console.log('myBtn22:' + demo);
+            var modal = document.getElementById("myModal22");
+            var btn = document.getElementById("myBtn22");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+        document.getElementById("myBtn23").addEventListener("click", function () {
+            demo = true;
+            console.log('myBtn23:' + demo);
+            var modal = document.getElementById("myModal23");
+            var btn = document.getElementById("myBtn23");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+        document.getElementById("myBtn24").addEventListener("click", function () {
+            demo = true;
+            console.log('myBtn24:' + demo);
+            var modal = document.getElementById("myModal24");
+            var btn = document.getElementById("myBtn24");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+        document.getElementById("myBtn25").addEventListener("click", function () {
+            demo = true;
+            console.log('myBtn25:' + demo);
+            var modal = document.getElementById("myModal25");
+            var btn = document.getElementById("myBtn25");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+        document.getElementById("myBtn26").addEventListener("click", function () {
+            demo = true;
+            console.log('myBtn26:' + demo);
+            var modal = document.getElementById("myModal26");
+            var btn = document.getElementById("myBtn26");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+        document.getElementById("myBtn27").addEventListener("click", function () {
+            demo = true;
+            console.log('myBtn27:' + demo);
+            var modal = document.getElementById("myModal27");
+            var btn = document.getElementById("myBtn27");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+    </script>
 </body>
